@@ -11,6 +11,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .background {
@@ -26,16 +28,9 @@ body, html {
     transition: transform 0.1s ease-out;
 }
 
-/* Container for the content */
-.container {
+.content {
     position: relative;
-    max-width: 500px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
-    text-align: center;
-    backdrop-filter: blur(10px); /* Light blur behind the container */
+    z-index: 1;
 }
 
 h1 {
@@ -47,7 +42,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: rgba(76, 175, 80, 0.8); /* Transparent button */
+    background-color: rgba(76, 175, 80, 0.9); /* Slightly less transparent button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -56,13 +51,18 @@ button {
 }
 
 button:hover {
-    background-color: rgba(69, 160, 73, 0.8);
+    background-color: rgba(69, 160, 73, 0.9);
 }
 
-#ideaDisplay {
+.idea-box {
     margin-top: 20px;
+    padding: 20px;
     font-size: 18px;
-    color: #ddd; /* Lighter color for the text display */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    border-radius: 15px; /* Rounded corners */
+    color: #ddd; /* Lighter text color */
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
 /* Add a mouse-movement effect */
