@@ -7,6 +7,9 @@ body, html {
     background: #121212; /* Dark background */
     overflow: hidden;
     color: white; /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .background {
@@ -17,8 +20,8 @@ body, html {
     height: 100%;
     background: url('background.jpeg') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(10px);
-    transform: scale(1.1); /* Slight zoom effect */
+    filter: blur(5px); /* Reduced blur effect */
+    transform: scale(1.05); /* Slight zoom effect */
     z-index: -1;
     transition: transform 0.5s ease;
 }
@@ -26,14 +29,13 @@ body, html {
 /* Container for the content */
 .container {
     position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* More transparent background */
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
     text-align: center;
-    backdrop-filter: blur(15px); /* Blur behind the container */
+    backdrop-filter: blur(10px); /* Light blur behind the container */
 }
 
 h1 {
@@ -45,7 +47,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.8); /* More transparent button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -54,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: rgba(69, 160, 73, 0.8);
 }
 
 #ideaDisplay {
@@ -65,5 +67,5 @@ button:hover {
 
 /* Add a mouse-movement effect */
 body:hover .background {
-    transform: scale(1.2) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+    transform: scale(1.1) rotateX(var(--rotateX)) rotateY(var(--rotateY));
 }
