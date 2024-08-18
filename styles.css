@@ -23,7 +23,7 @@ body, html {
     height: 100%;
     background: url('background.jpeg') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(5px); /* Slight blur */
+    filter: blur(3px); /* Reduced blur for more visibility */
     z-index: -1;
     transition: transform 0.1s ease-out;
 }
@@ -31,6 +31,9 @@ body, html {
 .content {
     position: relative;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent to show more of the background */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 h1 {
@@ -42,7 +45,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: rgba(76, 175, 80, 0.9); /* Slightly less transparent button */
+    background-color: rgba(76, 175, 80, 0.8); /* Slightly more transparent button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -51,18 +54,18 @@ button {
 }
 
 button:hover {
-    background-color: rgba(69, 160, 73, 0.9);
+    background-color: rgba(69, 160, 73, 0.8);
 }
 
 .idea-box {
     margin-top: 20px;
-    padding: 20px;
-    font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
-    border-radius: 15px; /* Rounded corners */
+    padding: 10px 15px; /* Smaller padding to reduce box size */
+    font-size: 16px; /* Smaller font size */
+    background-color: rgba(0, 0, 0, 0.3); /* More transparent background to reveal the background image */
+    border-radius: 10px; /* Smaller rounded corners */
     color: #ddd; /* Lighter text color */
-    max-width: 500px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    max-width: 300px; /* Smaller max-width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
 /* Add a mouse-movement effect */
