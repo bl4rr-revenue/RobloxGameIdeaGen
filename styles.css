@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     font-family: Arial, sans-serif;
     background: #121212; /* Dark background */
     overflow: hidden;
@@ -20,10 +21,9 @@ body, html {
     height: 100%;
     background: url('background.jpeg') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(5px); /* Reduced blur effect */
-    transform: scale(1.05); /* Slight zoom effect */
+    filter: blur(5px); /* Slight blur */
     z-index: -1;
-    transition: transform 0.5s ease;
+    transition: transform 0.1s ease-out;
 }
 
 /* Container for the content */
@@ -31,9 +31,9 @@ body, html {
     position: relative;
     max-width: 500px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* More transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
     text-align: center;
     backdrop-filter: blur(10px); /* Light blur behind the container */
 }
@@ -47,7 +47,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: rgba(76, 175, 80, 0.8); /* More transparent button */
+    background-color: rgba(76, 175, 80, 0.8); /* Transparent button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -67,5 +67,5 @@ button:hover {
 
 /* Add a mouse-movement effect */
 body:hover .background {
-    transform: scale(1.1) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
 }

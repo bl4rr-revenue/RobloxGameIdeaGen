@@ -22,9 +22,9 @@ function generateIdea() {
 
 // Handle the mouse movement effect on the background
 document.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth) - 0.5;
-    const y = (e.clientY / window.innerHeight) - 0.5;
+    const x = (e.clientX / window.innerWidth - 0.5) * 30; // Scale for rotation
+    const y = (e.clientY / window.innerHeight - 0.5) * 30; // Scale for rotation
 
-    document.documentElement.style.setProperty('--rotateX', `${y * 15}deg`);
-    document.documentElement.style.setProperty('--rotateY', `${-x * 15}deg`);
+    document.documentElement.style.setProperty('--rotateX', `${y}deg`);
+    document.documentElement.style.setProperty('--rotateY', `${-x}deg`);
 });
