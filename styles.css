@@ -1,20 +1,44 @@
-body {
+/* Set up the basic styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-    margin-top: 50px;
+    background: #121212; /* Dark background */
+    overflow: hidden;
+    color: white; /* Light text color for contrast */
 }
 
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(10px);
+    transform: scale(1.1); /* Slight zoom effect */
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+/* Container for the content */
 .container {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    text-align: center;
+    backdrop-filter: blur(15px); /* Blur behind the container */
 }
 
 h1 {
-    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 button {
@@ -26,6 +50,7 @@ button {
     border: none;
     border-radius: 5px;
     margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -35,5 +60,10 @@ button:hover {
 #ideaDisplay {
     margin-top: 20px;
     font-size: 18px;
-    color: #555;
+    color: #ddd; /* Lighter color for the text display */
+}
+
+/* Add a mouse-movement effect */
+body:hover .background {
+    transform: scale(1.2) rotateX(var(--rotateX)) rotateY(var(--rotateY));
 }

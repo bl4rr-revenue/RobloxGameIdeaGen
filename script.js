@@ -19,3 +19,12 @@ function generateIdea() {
     // Display the idea on the page
     document.getElementById('ideaDisplay').innerText = idea;
 }
+
+// Handle the mouse movement effect on the background
+document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth) - 0.5;
+    const y = (e.clientY / window.innerHeight) - 0.5;
+
+    document.documentElement.style.setProperty('--rotateX', `${y * 15}deg`);
+    document.documentElement.style.setProperty('--rotateY', `${-x * 15}deg`);
+});
